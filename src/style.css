@@ -1,0 +1,32 @@
+.invisible {
+    display: none;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+    position: static;
+}
+#decodeContentTab{
+    display: none;
+    visibility: hidden;
+}
+.choosingTabs {
+  position: relative;
+  margin: 2em;
+}
+.generalTabs,.appContentCipher {  
+  padding: 2rem;
+}
+.generalTabs {
+  background-color: #ececec;
+}
+.generalTabs:focus {
+  background-color: #cccccc;
+}
+.appContentCipher {
+  position: absolute;
+  top: 3rem;
+  width: 80%;
+  border: 1px solid #ccc;
+}

@@ -2,15 +2,33 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>My WebSite</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div id="root">
-      <h1>Hola mundo! Mi primer Commit</h1>
-      <h1>Test para mi primer prueba de mi branch</h1>
+    <div>
+      <h1>criptMail</h1>
+      <h4>Descripción de la aplicación lo que va a hacer etc, imagen sobre el tema</h4></br>
     </div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
+    <div class="choosingTabs">
+      <span class="generalTabs" id="cipherLink"><i class="fa fa-lock fa-lg" aria-hidden="true"></i>Cipher</span>
+      <span class="generalTabs" id="decodeLink"><i class="fa fa-unlock fa-lg" aria-hidden="true"></i>Decode</span>
+        <div id="cipherTab" class="appContentCipher">
+          <p>Texto Normal</p>
+          <textarea name="textarea" rows="10" cols="50" placeholder="Escribe aquí"></textarea>
+          <p>Nivel de complejidad del cifrado</p>
+          <input type="number" name="1" min="1">
+          <input type="button" name="" value="goCipherMe">
+          <p>Tu mensaje cifrado es:</p>
+          <textarea name="textarea" rows="10" cols="50" placeholder="Mensaje Cifrado"></textarea>
+        </div>
+        <div id="decodeContentTab" class="appContentCipher" >
+          <p>Texto Normal</p>
+          <textarea name="textarea" rows="10" cols="50" placeholder="Escribe aquí"></textarea>
+          <p>Tu mensaje descifrado es:</p>
+          <textarea name="textarea" rows="10" cols="50" placeholder="Mensaje Descifrado"></textarea>
+        </div>
+    </div>
   </body>
 </html>
