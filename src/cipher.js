@@ -6,11 +6,27 @@ window.cipher = {
 
   }
 };
+/**/
+var normalText = 'ABC';
+var cipherKey = '2'
+for (var i = 0; i < normalText.length; i++) {
+  var c = normalText.charCodeAt(i);
+  var result = []
+  if (65 <= c && c <=  90) {
+  let cipheredText += String.fromCharCode((c - 65 + cipherKey) % 26 + 65);
+  result.push(String.fromCharCode(cipheredText));
+  }
+  const output = cipheredText.join('');
+  else {
+  console.log('Hi');
+  };
+};
+
 /*Ciphering working with one letter*/
 var normalText = 'A';
 var cipherKey = '2'
 for (var i = 0; i < normalText.length; i++) {
-	var c = normalText.charCodeAt(i);
+	var c = normalText.charCodeAt([i]);
 	var result = []
   if (65 <= c && c <=  90) {
   result += String.fromCharCode((c - 65 + cipherKey) % 26 + 65);
