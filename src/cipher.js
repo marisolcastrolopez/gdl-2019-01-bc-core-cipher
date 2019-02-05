@@ -1,5 +1,5 @@
 window.cipher = {
-  cipher.encode(cipherKey, plainText) {
+  cipher.encode(offset, string) {
 	
   }
   cipher.decode(offset, string){
@@ -7,7 +7,24 @@ window.cipher = {
   }
 };
 
-/*Cifrado con letras separadas 1 FEB 2019*/
+
+/*BEGINING: Cifrado con letras mayúsculas y minúsculas 5 FEB 2019*/
+var string = 'ABC';
+var offset = 2;
+var result = [];
+
+for (var i = 0; i < string.length; i++) {
+  var c = string.charCodeAt(i);
+  if (65 <= c && c <=  90) { //Letras Mayúsculas
+  result = result + String.fromCharCode((c - 65 + offset) % 26 + 65);
+  }
+  else if (97 <= c && c <=  122) { //Letras Minúsculas
+  result = result + String.fromCharCode((c - 97 + offset) % 26 + 97);
+  };
+};
+/*ENDS: Cifrado con letras mayúsculas y minúsculas 5 FEB 2019*/
+
+/*BEGINING: Cifrado con letras separadas 1 FEB 2019*/
 var normalText = 'ABC';
 var cipherKey = 2;
 var result = [];
@@ -23,10 +40,9 @@ for (var i = 0; i < normalText.length; i++) {
   console.log('Hi');
 	};
 };
+/*ENDS: Cifrado con letras separadas 1 FEB 2019*/
 
-
-
-/*JUST TESTS JUST TESTS JUST TESTS
+/*TESTS
 
 let array = phrase.split('');
 let normalText = 'ABC';
