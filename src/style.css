@@ -1,3 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+.col-6 {
+  width: 50%;
+}
+.col-12 {
+  width: 100%;
+}
+#data {
+  float: left;
+}
 .invisible {
     display: none;
     visibility: hidden;
@@ -24,9 +36,15 @@
 .generalTabs:focus {
   background-color: #cccccc;
 }
-.appContentCipher {
+@media screen and (max-width: 600px) { 
+  .appContentCipher{
   position: absolute;
   top: 3rem;
-  width: 80%;
   border: 1px solid #ccc;
-}
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  height: 100vh;
+    }
+  }

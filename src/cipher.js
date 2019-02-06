@@ -1,12 +1,78 @@
 window.cipher = {
-  cipher.encode(offset, string) {
-	
-  }
-  cipher.decode(offset, string){
+  encode: function(string,offset) {
+    var result = [];
+    for (var i = 0; i < string.length; i++) { //Función cifrar CORRECTO
+      var c = string.charCodeAt(i);
+      if (65 <= c && c <=  90) { //Letras Mayúsculas
+        result = result + String.fromCharCode((c - 65 + offset) % 26 + 65);
+      }
+      else if (97 <= c && c <= 122) { //Letras Minúsculas CORRECTO
+        result = result + String.fromCharCode((c - 97 + offset) % 26 + 97);
+      }
+    }
+    return result;
+  }, //Separar cosas del objeto no borrar coma
 
+  decode: function(string,offset) {
+    var result = [];
+    for (var i = 0; i < string.length; i++) { //Función descifrar
+      var c = string.charCodeAt(i);
+      if (65 <= c && c <=  90) { //Letras Mayúsculas
+        result = result + String.fromCharCode((c + 65 - offset) % 26 + 65);
+      }
+      else if (97 <= c && c <= 122) { //Letras Minúsculas
+        result = result + String.fromCharCode((c + 59 - offset) % 26 + 97);
+      }
+    }
+    return result;
   }
 };
-/*BEGINING: Cifrado ya funciona 5 FEB 2019*/
+
+/*ENCODING with map
+var map = Array.prototype.map;
+var valores = map.call('ABCabc', function(char) { return char.charCodeAt(0) + 2 ;}); console.log(valores);
+var newArr = [];
+for(var i = 0; i < valores.length; i++) {
+  var elements = String.fromCharCode(valores[i]); console.log(elements);
+  document.write(elements);
+};
+
+var map = Array.prototype.map;
+var valores = map.call('ABCabc', function(char) { return char.charCodeAt(0) - 2 ;}); console.log(valores);
+var newArr = [];
+for(var i = 0; i < valores.length; i++) {
+  var elements = String.fromCharCode(valores[i]); console.log(elements);
+  document.write(elements);
+};
+/*ENCODING end*/
+
+/*BEGINING: Descifrado ya funciona con mayúsculas y 5 FEB 2019
+var string = 'ABC';
+var offset = 2;
+var result = [];
+
+for (var i = 0; i < string.length; i++) { //Función cifrar CORRECTO
+  var c = string.charCodeAt(i);
+  if (65 <= c && c <=  90) { //Letras Mayúsculas
+  result = result + String.fromCharCode((c - 65 + offset) % 26 + 65);
+  }
+  else if (97 <= c && c <= 122) { //Letras Minúsculas CORRECTO
+  result = result + String.fromCharCode((c - 97 + offset) % 26 + 97);
+  };
+};
+
+for (var i = 0; i < string.length; i++) { //Función descifrar
+  var c = string.charCodeAt(i);
+  if (65 <= c && c <=  90) { //Letras Mayúsculas
+  result = result + String.fromCharCode((c + 65 - offset) % 26 + 65);
+  }
+  else if (97 <= c && c <= 122) { //Letras Minúsculas
+  result = result + String.fromCharCode((c + 97 - offset) % 26 + 97);
+  };
+};
+
+/*ENDS: Cifrado con letras mayúsculas y minúsculas 5 FEB 2019*/
+/*BEGINING: Descifrado ya funciona 5 FEB 2019
 var string = 'ABC';
 var offset = 2;
 var result = [];
@@ -34,7 +100,7 @@ for (var i = 0; i < string.length; i++) { //Función descifrar
 };
 
 /*ENDS: Cifrado con letras mayúsculas y minúsculas 5 FEB 2019*/
-/*BEGINING: Intento de usar todos los rangos ASCII 5 FEB 2019*/
+/*BEGINING: Intento de usar todos los rangos ASCII 5 FEB 2019
 var string = 'ABC';
 var string = 'ABCabc!"#$%&';
 var offset = 2;
@@ -61,7 +127,7 @@ for (var i = 0; i < string.length; i++) { //Función descifrar
 
 /*ENDS: Intento de usar todos los rangos ASCII 5 FEB 2019*/
 
-/*BEGINING: Cifrado con letras mayúsculas y minúsculas 5 FEB 2019*/
+/*BEGINING: Cifrado con letras mayúsculas y minúsculas 5 FEB 2019
 var string = 'ABC';
 var offset = 2;
 var result = [];
