@@ -11,7 +11,7 @@ window.cipher = {
       }
     }
     return result;
-  }, //Separar cosas del objeto no borrar coma
+  }, //Separar cosas del window no borrar coma
 
   decode: function(string,offset) {
     var result = [];
@@ -44,7 +44,7 @@ for(var i = 0; i < valores.length; i++) {
   var elements = String.fromCharCode(valores[i]); console.log(elements);
   document.write(elements);
 };
-/*ENCODING end*/
+/*ENCODING with map end*/
 
 /*BEGINING: Descifrado ya funciona con mayúsculas y 5 FEB 2019
 var string = 'ABC';
@@ -99,7 +99,7 @@ for (var i = 0; i < string.length; i++) { //Función descifrar
   };
 };
 
-/*ENDS: Cifrado con letras mayúsculas y minúsculas 5 FEB 2019*/
+/*ENDS: Descifrado ya funciona 5 FEB 2019*/
 /*BEGINING: Intento de usar todos los rangos ASCII 5 FEB 2019
 var string = 'ABC';
 var string = 'ABCabc!"#$%&';
@@ -125,7 +125,7 @@ for (var i = 0; i < string.length; i++) { //Función descifrar
   };
 };
 
-/*ENDS: Intento de usar todos los rangos ASCII 5 FEB 2019*/
+/*ENDS:Intento de usar todos los rangos ASCII 5 FEB 2019*/
 
 /*BEGINING: Cifrado con letras mayúsculas y minúsculas 5 FEB 2019
 var string = 'ABC';

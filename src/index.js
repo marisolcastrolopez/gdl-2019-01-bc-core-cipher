@@ -13,7 +13,7 @@ let decrypt = () => {
 	let cipherKey = parseInt(document.getElementById('cipherKey').value);
 	let cipherResult = document.getElementById('cipherResult');
 	let cipherPrinted = cipher.encode(toCipherText,cipherKey);
-	cipherResult = cipherPrinted;
+	cipherResult.value = cipherPrinted;
 };
 
 document.getElementById('cipherButton').addEventListener('click',crypt);

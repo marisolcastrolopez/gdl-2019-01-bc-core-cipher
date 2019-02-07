@@ -7,8 +7,19 @@
 .col-12 {
   width: 100%;
 }
+#headerbox{
+  padding: 2em 1em 0.1em 2em;
+  background-color: aliceblue;
+}
 #data {
   float: left;
+  padding: 10px 100px 100px 50px;
+  background-color: aquamarine;
+}
+#cipherTab {
+  background-color: blue;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
 }
 .invisible {
     display: none;
@@ -26,6 +37,7 @@
 .choosingTabs {
   position: relative;
   margin: 2em;
+  background-color: bisque;
 }
 .generalTabs,.appContentCipher {  
   padding: 2rem;
