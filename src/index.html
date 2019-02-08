@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>My WebSite</title>
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -20,23 +21,25 @@
 <button id="tabCrypt"><i class="fa fa-lock fa-lg" aria-hidden="true"></i>Cifrar</button>
   <section id="tab1" class="visible">
     <p>Texto Normal</p>
-    <textarea id="toCipherText" name="textarea" rows="10" cols="50" placeholder="Escribe aquí"></textarea>
+    <textarea id="toCipherText" name="textarea" rows="10" cols="50" placeholder="Escribe aquí" required></textarea>
     <p>Nivel de complejidad del cifrado</p>
-    <input id="cipherKey" type="number" name="1" min="1">
-    <button id="cipherButton" type="button" name="" value="">goCipherMe</button>
+    <input id="cipherKey" class="keyCiphering" type="number" name="1" min="1" max="100" required>
+    <button type="submit" id="cipherButton" class="buttonCiphering" name="" value="" required>goCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
     <p>Tu mensaje cifrado es:</p>
     <textarea id="cipherResult" name="textarea" rows="10" cols="50" placeholder="Mensaje Cifrado"></textarea>
+    <p id="demo"></p>
   </section>
 
 <button id="tabUncrypt" class="deactivated"><i class="fa fa-unlock fa-lg" aria-hidden="true"></i>Descifrar</button>
   <section id="tab2" class="invisible">
     <p>Texto Cifrado</p>
-    <textarea id="toUnCipherText" name="textarea" rows="10" cols="50" placeholder="Escribe aquí"></textarea>
+    <textarea id="toUnCipherText" name="textarea" rows="10" cols="50" placeholder="Escribe aquí" required></textarea>
     <p>Tu número de descifrado</p>
-    <input id="unCipherKey" type="number" name="1" min="1">
-    <button id="unCipherButton" type="button" name="" value="">goUnCipherMe</button>
+    <input id="unCipherKey" class="keyCiphering" type="number" name="1" min="1" max="100">
+    <button type="submit" id="unCipherButton" class="buttonCiphering" name="" value="" required>goUnCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
     <p>Tu mensaje descifrado es:</p>
     <textarea id="unCipherResult" name="textarea" rows="10" cols="50" placeholder="Mensaje Cifrado"></textarea>
+
   </section>
 
 </article>

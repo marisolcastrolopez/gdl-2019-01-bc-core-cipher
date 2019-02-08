@@ -11,7 +11,7 @@ window.cipher = {
       }
     }
     return result;
-  }, //Separar cosas del window no borrar coma
+  }, //Separar funciones del window no borrar coma
 
   decode: function(offset,string) {
     var result = [];

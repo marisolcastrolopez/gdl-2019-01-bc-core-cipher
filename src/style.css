@@ -1,5 +1,10 @@
 /*font-family: 'Titillium Web', sans-serif;
 font-family: 'Lato', sans-serif;*/
+*,*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 html, body{
   height: 100%;
   width: 100%;
@@ -22,7 +27,7 @@ html, body{
   width: 100%;
 }
 #headerbox{
-  padding: 2em 1em 3em 2em;
+  padding: 2em 1em 2em 2em;
   background-color: white;
   text-align: center;
   font-family: 'Lato', sans-serif;
@@ -30,10 +35,12 @@ html, body{
 #tab1{
   background-color: white;
   font-family: 'Lato', sans-serif;
+  box-shadow: 1px 9px 20px 9px #0000002b;
 }
 #tab2{
   background-color: white;
   font-family: 'Lato', sans-serif;
+  box-shadow: 1px 9px 20px 9px #0000002b;
 }
 #tabCrypt {
   position: absolute;
@@ -43,12 +50,13 @@ html, body{
   height: 3.5em;
   padding: 2%;
   margin-top: -4%;
-  color: black;
+  color: #139fa0;
   background-color: white;
   text-align: center;
   line-height: 1.8em;
   border-style: none;
   transition: all .8s;
+  outline: none;
 }
 #tabUncrypt{
   margin-top: -4%;
@@ -59,22 +67,40 @@ html, body{
   width: 120px;
   height: 3.5em;
   padding: 2%;
-  color: black;
+  color: #139fa0;
   background-color: white;
   text-align: center;
   line-height: 1.8em;
   border-style: none;
   transition: all .8s;
+  outline: none;
 }
 .deactivated{
+  font-size: 1em;
+  font-weight: normal;
+  color: black;
   background-color: #7eadac;
   opacity: 0.5;
   transition: all .8s;
 }
-.activated{
+.activated {
   background-color: white;
   opacity: 1;
   transition: all .8s;
+}
+.buttonCiphering {
+  border-style: none;
+  padding: 8px 30px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  background-color: #259fb1;
+  color: white;
+  outline: none;
+}
+.keyCiphering {
+  height: 6%;
 }
 article.tabs {
   position: relative;
@@ -86,11 +112,11 @@ article.tabs {
 article.tabs section {
   position: absolute;
   display: block;
-  width: 100%;
+  width: 90%;
   top: 1.8em;
   left: 0;
   height: 32em;
-  padding: 10px 20px;
+  padding: 0px 0px 0px 10%;
   border-radius: 0px;
-  text-align: center;
+  float: left;
 }

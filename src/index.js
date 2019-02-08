@@ -1,4 +1,3 @@
-
 //The user choose an action to start
 let selectTab = () => {
 	const button1 = document.querySelector('#tabCrypt');
