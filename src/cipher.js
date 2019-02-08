@@ -1,5 +1,5 @@
 window.cipher = {
-  encode: function(string,offset) {
+  encode: function(offset,string) {
     var result = [];
     for (var i = 0; i < string.length; i++) { //Función cifrar CORRECTO
       var c = string.charCodeAt(i);
@@ -13,7 +13,7 @@ window.cipher = {
     return result;
   }, //Separar cosas del window no borrar coma
 
-  decode: function(string,offset) {
+  decode: function(offset,string) {
     var result = [];
     for (var i = 0; i < string.length; i++) { //Función descifrar
       var c = string.charCodeAt(i);
