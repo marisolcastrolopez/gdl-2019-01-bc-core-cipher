@@ -1,13 +1,21 @@
 
-//Función Encriptar
-let cryptTab = () => {
-	document.getElementById("tab2").setAttribute("class", "invisible");
-	document.getElementById("tabUncrypt").setAttribute("class", "visible");
+//The user choose an action to start
+let selectTab = () => {
+	let tab1 = document.getElementById("tab1");
+	let tab2 = document.getElementById("tab2");
+	const button1 = document.querySelector('#tabCrypt');
+	const button2 = document.querySelector('#tabUncrypt');
+	
+	button1.onclick = function() {
+	document.getElementById("tab1").setAttribute("class","visible");
+    document.getElementById("tab2").setAttribute("class","invisible");
+  };
+  	button2.onclick = function() {
+    document.getElementById("tab1").setAttribute("class","invisible");
+    document.getElementById("tab2").setAttribute("class","visible");
+  };
 };
-let decryptTab = () => {
-	document.getElementById("tab1").setAttribute("class", "invisible");
-	document.getElementById("tabCrypt").setAttribute("class", "visible");
-};
+//Encode Function
 let crypt = () => {
 	let toCipherText = document.getElementById('toCipherText').value;
 	let cipherKey = parseInt(document.getElementById('cipherKey').value);
@@ -15,7 +23,7 @@ let crypt = () => {
 	let cipherPrinted = cipher.encode(cipherKey,toCipherText);
 	cipherResult.value = cipherPrinted;
 };
-//Función Desencriptar
+//Decode Function
 let decrypt = () => {
 	let toUnCipherText = document.getElementById('toUnCipherText').value;
 	let unCipherKey = parseInt(document.getElementById('unCipherKey').value);
@@ -23,7 +31,7 @@ let decrypt = () => {
 	let unCipherPrinted = cipher.decode(unCipherKey,toUnCipherText);
 	unCipherResult.value = unCipherPrinted;
 };
-document.getElementById('tabUncrypt').addEventListener('click',decryptTab);
-document.getElementById('tabCrypt').addEventListener('click',cryptTab);
+document.getElementById('tabCrypt').addEventListener('click',selectTab);
+document.getElementById('tabUncrypt').addEventListener('click',selectTab);
 document.getElementById('cipherButton').addEventListener('click',crypt);
 document.getElementById('unCipherButton').addEventListener('click',decrypt);

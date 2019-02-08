@@ -18,7 +18,7 @@
 <article class="tabs">
 
 <button id="tabCrypt"><i class="fa fa-lock fa-lg" aria-hidden="true"></i>Cifrar</button>
-  <section id="tab1">
+  <section id="tab1" class="visible">
     <p>Texto Normal</p>
     <textarea id="toCipherText" name="textarea" rows="10" cols="50" placeholder="Escribe aquí"></textarea>
     <p>Nivel de complejidad del cifrado</p>
@@ -29,7 +29,7 @@
   </section>
 
 <button id="tabUncrypt"><i class="fa fa-unlock fa-lg" aria-hidden="true"></i>Descifrar</button>
-  <section id="tab2">
+  <section id="tab2" class="invisible">
     <p>Texto Cifrado</p>
     <textarea id="toUnCipherText" name="textarea" rows="10" cols="50" placeholder="Escribe aquí"></textarea>
     <p>Tu número de descifrado</p>
@@ -45,35 +45,3 @@
 <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
-<!--Tab Section for choose an action
-  <div class="choosingTabs">
-    <div>
-      <button class="generalTabs" id="cipherLink"><i class="fa fa-lock fa-lg" aria-hidden="true"></i>Cipher</button>
-      <button class="generalTabs" id="decodeLink"><i class="fa fa-unlock fa-lg" aria-hidden="true"></i>Decode</button>
-    </div>
-  </div>-->
-  <!--Encoding Tab
-  <div id="cipherTab" class="appContentCipher">
-    <div id="data" class="col-12">
-      <div id="inputTxt" class="col-6">
-      <p>Texto Normal</p>
-      <textarea id="toCipherText" name="textarea" rows="10" cols="50" placeholder="Escribe aquí"></textarea>
-      <p>Nivel de complejidad del cifrado</p>
-      <input id="cipherKey" type="number" name="1" min="1">
-      <button id="cipherButton" type="button" name="" value="">goCipherMe</button>
-      </div>
-      <div id="showTxt" class="col-6">
-      <p>Tu mensaje cifrado es:</p>
-      <textarea  id="cipherResult" name="textarea" rows="10" cols="50" placeholder="Mensaje Cifrado"></textarea>
-      </div>
-    </div>
-  </div>
-  Decode Tab
-  <div id="decodeContentTab" class="appContentCipher" >
-    <p>Texto Normal</p>
-    <textarea name="textarea" rows="10" cols="50" placeholder="Escribe aquí"></textarea>
-    <p>Tu mensaje descifrado es:</p>
-    <textarea name="textarea" rows="10" cols="50" placeholder="Mensaje Descifrado"></textarea>
-  </div>
-</div>
-Example Tab-->

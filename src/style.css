@@ -3,8 +3,9 @@ font-family: 'Lato', sans-serif;*/
 html, body{
   height: 100%;
   width: 100%;
-  background : blue;
   margin:auto;
+  background: rgb(135,226,189);
+background: linear-gradient(90deg, rgba(135,226,189,1) 0%, rgba(140,228,246,1) 100%);
 }
 .invisible {
     display: none;
