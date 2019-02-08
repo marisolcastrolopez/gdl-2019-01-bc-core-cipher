@@ -5,12 +5,16 @@ let selectTab = () => {
 	const button2 = document.querySelector('#tabUncrypt');
 	
 	button1.onclick = function() {
-	document.getElementById("tab1").setAttribute("class","visible");
-    document.getElementById("tab2").setAttribute("class","invisible");
+	document.getElementById("tab1").className = "visible";
+    document.getElementById("tab2").className = "invisible";
+    button1.className = "activated";
+    button2.className = "deactivated";
   };
 	button2.onclick = function() {
-    document.getElementById("tab1").setAttribute("class","invisible");
-    document.getElementById("tab2").setAttribute("class","visible");
+    document.getElementById("tab1").className = "invisible";
+    document.getElementById("tab2").className = "visible";
+    button1.className = "deactivated";
+    button2.className = "activated";
   };
 };
 //Encode Function

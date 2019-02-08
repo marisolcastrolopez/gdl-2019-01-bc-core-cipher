@@ -5,13 +5,12 @@ html, body{
   width: 100%;
   margin:auto;
   background: rgb(135,226,189);
-background: linear-gradient(90deg, rgba(135,226,189,1) 0%, rgba(140,228,246,1) 100%);
+  background: linear-gradient(90deg, rgba(135,226,189,1) 0%, rgba(140,228,246,1) 100%);
 }
 .invisible {
     display: none;
     visibility: hidden;
 }
-
 .visible {
     visibility: visible;
     position: static;
@@ -48,7 +47,8 @@ background: linear-gradient(90deg, rgba(135,226,189,1) 0%, rgba(140,228,246,1) 1
   background-color: white;
   text-align: center;
   line-height: 1.8em;
-  border-style: none
+  border-style: none;
+  transition: all .8s;
 }
 #tabUncrypt{
   margin-top: -4%;
@@ -63,7 +63,18 @@ background: linear-gradient(90deg, rgba(135,226,189,1) 0%, rgba(140,228,246,1) 1
   background-color: white;
   text-align: center;
   line-height: 1.8em;
-  border-style: none
+  border-style: none;
+  transition: all .8s;
+}
+.deactivated{
+  background-color: #7eadac;
+  opacity: 0.5;
+  transition: all .8s;
+}
+.activated{
+  background-color: white;
+  opacity: 1;
+  transition: all .8s;
 }
 article.tabs {
   position: relative;
