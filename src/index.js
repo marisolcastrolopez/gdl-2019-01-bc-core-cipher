@@ -1,8 +1,6 @@
 
 //The user choose an action to start
 let selectTab = () => {
-	let tab1 = document.getElementById("tab1");
-	let tab2 = document.getElementById("tab2");
 	const button1 = document.querySelector('#tabCrypt');
 	const button2 = document.querySelector('#tabUncrypt');
 	
@@ -10,7 +8,7 @@ let selectTab = () => {
 	document.getElementById("tab1").setAttribute("class","visible");
     document.getElementById("tab2").setAttribute("class","invisible");
   };
-  	button2.onclick = function() {
+	button2.onclick = function() {
     document.getElementById("tab1").setAttribute("class","invisible");
     document.getElementById("tab2").setAttribute("class","visible");
   };
