@@ -1,8 +1,8 @@
-//The user choose an action to start
+//The user choose an action to start. Encode tab is default.
 let selectTab = () => {
 	const button1 = document.querySelector('#tabCrypt');
 	const button2 = document.querySelector('#tabUncrypt');
-	
+//Loop for tabs, the user can choose between them.	
 	button1.onclick = function() {
 	document.getElementById("tab1").className = "visible";
     document.getElementById("tab2").className = "invisible";

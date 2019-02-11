@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>My WebSite</title>
+<title>CryptMail - Send secure emails</title>
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -13,37 +13,36 @@
 <!--Mail Title of the App-->
 <div id="main">
   <div id="headerbox">
-    <span>criptMail</span>
-    <span style="text-align: center;">Descripción de la aplicación lo que va a hacer etc, imagen sobre el tema</span>
+    <span>CryptMail</span>
+    <span style="text-align: center;">Send secure intern emails.</span>
   </div>
 <article class="tabs">
-
-<button id="tabCrypt"><i class="fa fa-lock fa-lg" aria-hidden="true"></i>Cifrar</button>
+<!--Cipher Part-->
+<button id="tabCrypt"><i class="fa fa-lock fa-lg" aria-hidden="true"></i>Encode</button>
   <section id="tab1" class="visible">
-    <p>Texto Normal</p>
-    <textarea id="toCipherText" name="textarea" rows="10" cols="50" placeholder="Escribe aquí" required></textarea>
-    <p>Nivel de complejidad del cifrado</p>
+    <p>Text to encode:</p>
+    <textarea id="toCipherText" name="textarea" rows="10" cols="50" placeholder="Write or paste your text here" required></textarea>
+    <p>Encoding Key - Choose a number</p>
     <input id="cipherKey" class="keyCiphering" type="number" name="1" min="1" max="100" required>
     <button type="submit" id="cipherButton" class="buttonCiphering" name="" value="" required>goCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
-    <p>Tu mensaje cifrado es:</p>
-    <textarea id="cipherResult" name="textarea" rows="10" cols="50" placeholder="Mensaje Cifrado"></textarea>
-    <p id="demo"></p>
+    <p>Your encoded email is:</p>
+    <textarea id="cipherResult" name="textarea" rows="10" cols="50" placeholder="Encrypted email text result"></textarea>
   </section>
-
-<button id="tabUncrypt" class="deactivated"><i class="fa fa-unlock fa-lg" aria-hidden="true"></i>Descifrar</button>
+<!--Decode Part-->
+<button id="tabUncrypt" class="deactivated"><i class="fa fa-unlock fa-lg" aria-hidden="true"></i>Decode</button>
   <section id="tab2" class="invisible">
-    <p>Texto Cifrado</p>
-    <textarea id="toUnCipherText" name="textarea" rows="10" cols="50" placeholder="Escribe aquí" required></textarea>
-    <p>Tu número de descifrado</p>
+    <p>Text to decode:</p>
+    <textarea id="toUnCipherText" name="textarea" rows="10" cols="50" placeholder="Write or paste your text here" required></textarea>
+    <p>Decoding Key - Enter your key</p>
     <input id="unCipherKey" class="keyCiphering" type="number" name="1" min="1" max="100">
     <button type="submit" id="unCipherButton" class="buttonCiphering" name="" value="" required>goUnCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
-    <p>Tu mensaje descifrado es:</p>
-    <textarea id="unCipherResult" name="textarea" rows="10" cols="50" placeholder="Mensaje Cifrado"></textarea>
-
+    <p>Your decrypted message is:</p>
+    <textarea id="unCipherResult" name="textarea" rows="10" cols="50" placeholder="Decrypted email text result"></textarea>
   </section>
-
 </article>
+<!--App Ends-->
 </div>
+<!--JS-->
 <script type="text/javascript" src="cipher.js"></script>
 <script type="text/javascript" src="index.js"></script>
 </body>

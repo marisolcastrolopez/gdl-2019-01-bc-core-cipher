@@ -13,12 +13,12 @@ html, body{
   background: linear-gradient(90deg, rgba(135,226,189,1) 0%, rgba(140,228,246,1) 100%);
 }
 .invisible {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }
 .visible {
-    visibility: visible;
-    position: static;
+  visibility: visible;
+  position: static;
 }
 .col-6 {
   width: 50%;
