@@ -88,7 +88,7 @@ html, body{
   opacity: 1;
   transition: all .8s;
 }
-.buttonCiphering {
+.button-app {
   border-style: none;
   padding: 8px 30px;
   font-family: 'Lato', sans-serif;
@@ -99,7 +99,7 @@ html, body{
   color: white;
   outline: none;
 }
-.keyCiphering {
+.key-input {
   height: 6%;
 }
 article.tabs {

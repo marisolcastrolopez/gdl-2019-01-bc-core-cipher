@@ -14,7 +14,7 @@
 <div id="main">
   <div id="headerbox">
     <span>CryptMail</span>
-    <span style="text-align: center;">Send secure intern emails.</span>
+    <span>Send secure intern emails.</span>
   </div>
 <article class="tabs">
 <!--Encode Part-->
@@ -23,8 +23,8 @@
     <p>Text to encode:</p>
     <textarea id="toCipherText" name="textarea" rows="10" cols="50" placeholder="Write or paste your text here" required></textarea>
     <p>Encoding Key - Choose a number</p>
-    <input id="cipherKey" class="keyCiphering" type="number" name="1" min="1" max="100" required>
-    <button type="submit" id="cipherButton" class="buttonCiphering" name="button" value="">goCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
+    <input id="cipherKey" class="key-input" type="number" name="1" min="1" max="100" required />
+    <button type="submit" id="cipherButton" class="button-app" name="button" value="">goCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
     <p>Your encoded email is:</p>
     <textarea id="cipherResult" name="textarea" rows="10" cols="50" placeholder="Encrypted email text result"></textarea>
   </section>
@@ -34,15 +34,15 @@
     <p>Text to decode:</p>
     <textarea id="toUnCipherText" name="textarea" rows="10" cols="50" placeholder="Write or paste your text here" required></textarea>
     <p>Decoding Key - Enter your key</p>
-    <input id="unCipherKey" class="keyCiphering" type="number" name="1" min="1" max="100">
-    <button type="submit" id="unCipherButton" class="buttonCiphering" name="button" value="">goUnCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
+    <input id="unCipherKey" class="key-input" type="number" name="1" min="1" max="100" />
+    <button type="submit" id="unCipherButton" class="button-app" name="button" value="">goUnCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
     <p>Your decrypted message is:</p>
     <textarea id="unCipherResult" name="textarea" rows="10" cols="50" placeholder="Decrypted email text result" required></textarea>
   </section>
 </article>
 </div>
 <!--JS-->
-<script type="text/javascript" src="cipher.js"></script>
-<script type="text/javascript" src="index.js"></script>
+<script src="cipher.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
