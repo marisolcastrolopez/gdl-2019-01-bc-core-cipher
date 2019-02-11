@@ -1,12 +1,15 @@
 window.cipher = {
   encode: function (offset,string) {
     var result = [];
-    for (var i = 0; i < string.length; i++) { //Enconde Function
+    //Enconde Function
+    for (var i = 0; i < string.length; i++) {
       var c = string.charCodeAt(i);
-      if (65 <= c && c <=  90) { //Uppercase encoding
+      //Uppercase encoding
+      if (65 <= c && c <=  90) {
         result = result + String.fromCharCode((c - 65 + offset) % 26 + 65);
       }
-      else if (97 <= c && c <= 122) { //Lowercase encoding
+      //Lowercase encoding
+      else if (97 <= c && c <= 122) {
         result = result + String.fromCharCode((c - 97 + offset) % 26 + 97);
       }
     }
@@ -15,12 +18,15 @@ window.cipher = {
 
   decode: function (offset,string) {
     var result = [];
-    for (var i = 0; i < string.length; i++) { //Decode Function
+    //Decode Function
+    for (var i = 0; i < string.length; i++) {
       var c = string.charCodeAt(i);
-      if (65 <= c && c <=  90) { //Uppercase decoding
+      //Uppercase decoding
+      if (65 <= c && c <=  90) {
         result = result + String.fromCharCode((c + 65 - offset) % 26 + 65);
       }
-      else if (97 <= c && c <= 122) { //Lowercase decoding
+      //Lowercase decoding
+      else if (97 <= c && c <= 122) {
         result = result + String.fromCharCode((c + 59 - offset) % 26 + 97);
       }
     }

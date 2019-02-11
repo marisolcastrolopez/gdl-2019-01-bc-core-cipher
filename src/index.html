@@ -10,21 +10,21 @@
 <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 </head>
 <body>
-<!--Mail Title of the App-->
+<!--Main Title of the App-->
 <div id="main">
   <div id="headerbox">
     <span>CryptMail</span>
     <span style="text-align: center;">Send secure intern emails.</span>
   </div>
 <article class="tabs">
-<!--Cipher Part-->
+<!--Encode Part-->
 <button id="tabCrypt"><i class="fa fa-lock fa-lg" aria-hidden="true"></i>Encode</button>
   <section id="tab1" class="visible">
     <p>Text to encode:</p>
     <textarea id="toCipherText" name="textarea" rows="10" cols="50" placeholder="Write or paste your text here" required></textarea>
     <p>Encoding Key - Choose a number</p>
     <input id="cipherKey" class="keyCiphering" type="number" name="1" min="1" max="100" required>
-    <button type="submit" id="cipherButton" class="buttonCiphering" name="" value="" required>goCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
+    <button type="submit" id="cipherButton" class="buttonCiphering" name="button" value="">goCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
     <p>Your encoded email is:</p>
     <textarea id="cipherResult" name="textarea" rows="10" cols="50" placeholder="Encrypted email text result"></textarea>
   </section>
@@ -35,12 +35,11 @@
     <textarea id="toUnCipherText" name="textarea" rows="10" cols="50" placeholder="Write or paste your text here" required></textarea>
     <p>Decoding Key - Enter your key</p>
     <input id="unCipherKey" class="keyCiphering" type="number" name="1" min="1" max="100">
-    <button type="submit" id="unCipherButton" class="buttonCiphering" name="" value="" required>goUnCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
+    <button type="submit" id="unCipherButton" class="buttonCiphering" name="button" value="">goUnCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
     <p>Your decrypted message is:</p>
-    <textarea id="unCipherResult" name="textarea" rows="10" cols="50" placeholder="Decrypted email text result"></textarea>
+    <textarea id="unCipherResult" name="textarea" rows="10" cols="50" placeholder="Decrypted email text result" required></textarea>
   </section>
 </article>
-<!--App Ends-->
 </div>
 <!--JS-->
 <script type="text/javascript" src="cipher.js"></script>
