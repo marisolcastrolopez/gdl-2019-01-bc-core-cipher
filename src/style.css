@@ -6,16 +6,17 @@ font-family: 'Lato', sans-serif;*/
     box-sizing: border-box;
 }
 html, body{
-   min-height: 100vh;
+  min-height: 100vh;
+  background-attachment: fixed;
+  margin: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-repeat:no-repeat;
-  margin:auto;
-  background: -moz-linear-gradient(0deg, rgba(4,34,224,1) 0%, rgba(9,200,250,1) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(4,34,224,1) 0%, rgba(9,200,250,1) 100%);
-  background: linear-gradient(0deg, rgba(4,34,224,1) 0%, rgba(9,200,250,1) 100%);
+  background: -moz-linear-gradient(0deg, rgba(4,34,224,1) 0%, rgba(9,200,250,1) 100%) fixed;
+  background: -webkit-linear-gradient(0deg, rgba(4,34,224,1) 0%, rgba(9,200,250,1) 100%) fixed;
+  background: linear-gradient(0deg, rgba(4,34,224,1) 0%, rgba(9,200,250,1) 100%) fixed;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0422e0",endColorstr="#09c8fa",GradientType=1);
 }
 .invisible {
@@ -56,7 +57,7 @@ html, body{
   height: 3.5em;
   padding: 2%;
   margin-top: -4%;
-  color: #139fa0;
+  color: #0791e4;
   background-color: white;
   text-align: center;
   line-height: 1.8em;
@@ -73,7 +74,7 @@ html, body{
   width: 120px;
   height: 3.5em;
   padding: 2%;
-  color: #139fa0;
+  color: #0791e4;
   background-color: white;
   text-align: center;
   line-height: 1.8em;
@@ -96,12 +97,12 @@ html, body{
 }
 .button-app {
   border-style: none;
-  padding: 8px 30px;
+  padding: 12px 30px;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   text-align: center;
   margin: 0;
-  background-color: #259fb1;
+  background-color: #1c7bea;
   color: white;
   outline: none;
 }
