@@ -14,31 +14,30 @@
 <!--Main Title of the App-->
 <div id="main">
   <div id="headerbox">
-    <span>CryptMail</span>
-    <span>Send secure intern emails.</span>
+    <span id="app-title"><i class="far fa-envelope fa-lg"></i> CryptMail </span><span id="app-description">Send secure intern emails</span>
   </div>
 <article class="tabs">
 <!--Encode Part-->
 <button id="tabCrypt"><i class="fa fa-lock fa-lg" aria-hidden="true"></i>Encode</button>
   <section id="tab1" class="visible">
-    <p>Text to encode:</p>
-    <textarea id="toCipherText" name="textarea" rows="10" cols="50" placeholder="Write or paste your text here" required></textarea>
-    <p>Encoding Key - Choose a number</p>
+    <p class="instructions">Text to encode:</p>
+    <textarea id="toCipherText" name="textarea" rows="10" cols="50" placeholder="Write or paste your text here"></textarea>
+    <p class="instructions">Encoding Key - Choose a number</p>
     <input id="cipherKey" class="key-input" type="number" name="1" min="1" max="100" required />
-    <button type="submit" id="cipherButton" class="button-app" name="button" value="">goCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
-    <p>Your encoded email is:</p>
+    <button type="submit" id="cipherButton" class="button-app" name="button" value="">Encode <i class="fas fa-arrow-down fa-lg"></i></button>
+    <p class="instructions">Your encoded email is:</p>
     <textarea id="cipherResult" name="textarea" rows="10" cols="50" placeholder="Encrypted email text result"></textarea>
   </section>
 <!--Decode Part-->
 <button id="tabUncrypt" class="deactivated"><i class="fa fa-unlock fa-lg" aria-hidden="true"></i>Decode</button>
   <section id="tab2" class="invisible">
-    <p>Text to decode:</p>
-    <textarea id="toUnCipherText" name="textarea" rows="10" cols="50" placeholder="Write or paste your text here" required></textarea>
-    <p>Decoding Key - Enter your key</p>
+    <p class="instructions">Text to decode:</p>
+    <textarea id="toUnCipherText" name="textarea" rows="10" cols="50" placeholder="Write or paste your text here"></textarea>
+    <p class="instructions">Decoding Key - Enter your key</p>
     <input id="unCipherKey" class="key-input" type="number" name="1" min="1" max="100" />
-    <button type="submit" id="unCipherButton" class="button-app" name="button" value="">goUnCipherMe <i class="fas fa-arrow-down fa-lg"></i></button>
-    <p>Your decrypted message is:</p>
-    <textarea id="unCipherResult" name="textarea" rows="10" cols="50" placeholder="Decrypted email text result" required></textarea>
+    <button type="submit" id="unCipherButton" class="button-app" name="button" value="">Decode <i class="fas fa-arrow-down fa-lg"></i></button>
+    <p class="instructions">Your decrypted message is:</p>
+    <textarea id="unCipherResult" name="textarea" rows="10" cols="50" placeholder="Decrypted email text result"></textarea>
   </section>
 </article>
 </div>
