@@ -6,11 +6,17 @@ font-family: 'Lato', sans-serif;*/
     box-sizing: border-box;
 }
 html, body{
-  height: 100%;
-  width: 100%;
+   min-height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat:no-repeat;
   margin:auto;
-  background: rgb(135,226,189);
-  background: linear-gradient(90deg, rgba(135,226,189,1) 0%, rgba(140,228,246,1) 100%);
+  background: -moz-linear-gradient(0deg, rgba(4,34,224,1) 0%, rgba(9,200,250,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(4,34,224,1) 0%, rgba(9,200,250,1) 100%);
+  background: linear-gradient(0deg, rgba(4,34,224,1) 0%, rgba(9,200,250,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0422e0",endColorstr="#09c8fa",GradientType=1);
 }
 .invisible {
   display: none;
